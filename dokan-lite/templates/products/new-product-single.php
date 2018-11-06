@@ -411,6 +411,13 @@ if ( ! $from_shortcode ) {
 
                         <!--hidden input for Firefox issue-->
                         <input type="hidden" name="dokan_update_product" value="<?php esc_attr_e( 'Save Product', 'dokan-lite' ); ?>"/>
+						
+						<!-- Pare Add publish product hidden field -->
+						<input type="hidden" id="dokan_post_status" name="post_status" value="<?php echo  $post_status ?>"/>
+						
+						<!-- Pare Add publish product button  -->
+						 <input type="submit" name="dokan_publish_button" class="dokan-btn dokan-btn-theme dokan-btn-lg dokan-right" value="PUBLISH" onclick="document.getElementById('dokan_post_status').value = 'publish';"/>
+						 
                         <input type="submit" name="dokan_update_product" class="dokan-btn dokan-btn-theme dokan-btn-lg dokan-right" value="<?php esc_attr_e( 'Save Product', 'dokan-lite' ); ?>"/>
                         <div class="dokan-clearfix"></div>
                     </form>

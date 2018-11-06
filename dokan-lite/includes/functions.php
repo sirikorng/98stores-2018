@@ -944,7 +944,12 @@ function dokan_get_page_url( $page, $context = 'dokan' ) {
  */
 function dokan_edit_product_url( $product_id ) {
     if ( get_post_field( 'post_status', $product_id ) == 'publish' ) {
-        return trailingslashit( get_permalink( $product_id ) ). 'edit/';
+        //return trailingslashit( get_permalink( $product_id ) ). 'edit/';
+		
+		//Pare Add edit product URL bug
+       
+      // return trailingslashit( get_permalink( $product_id ) ). 'dashboard/products/';    
+		return "https://98stores.com/dashboard/products";
     }
 
     $new_product_url = dokan_get_navigation_url('products');
